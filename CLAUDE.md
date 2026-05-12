@@ -33,6 +33,9 @@ python -m pytest tests/test_utils.py
 
 # Run a single test by name
 python -m pytest tests/test_utils.py::test_greet
+
+# Run the terminal manager
+python terminal_manager.py
 ```
 
 ## Architecture
