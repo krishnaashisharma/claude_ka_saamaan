@@ -37,8 +37,8 @@ def main():
     
     # Example operations
     operations = [
-        ("Check terminal version", "Get-Module -Name Microsoft.PowerShell.ConsoleHost -ListAvailable"),
-        ("List installed packages", "Get-Package -ListAvailable"),
+        ("Check terminal version", "$PSVersionTable.PSVersion"),
+        ("List installed packages", "Get-Package | Select-Object -Property Name, Version"),
         ("Show environment variables", "$env:PATH -split ';'")
     ]
     
