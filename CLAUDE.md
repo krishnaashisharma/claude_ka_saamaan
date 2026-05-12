@@ -38,15 +38,16 @@ python -m pytest tests/test_utils.py::test_greet
 ## Architecture
 
 ```
-main.py          # Entry point — imports from src and runs the app
+main.py              # Entry point — imports from src and runs the app
+terminal_manager.py  # Runs PowerShell commands non-interactively and logs results to terminal_audit.log
 src/
-  utils.py       # Shared utility functions
+  utils.py           # Shared utility functions
   __init__.py
 tests/
-  test_utils.py  # pytest tests mirroring src/ structure
+  test_utils.py      # pytest tests mirroring src/ structure
   __init__.py
-.env             # Local env vars (not committed)
-requirements.txt # Runtime dependencies: python-dotenv, requests, httpx
+.env                 # Local env vars (not committed)
+requirements.txt     # Runtime dependencies: python-dotenv, requests, httpx, pytest
 ```
 
 `python-dotenv` is available; load `.env` with `load_dotenv()` from `dotenv` when environment variables are needed at runtime.
